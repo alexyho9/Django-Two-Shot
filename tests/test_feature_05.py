@@ -90,7 +90,6 @@ class FeatureTests(TestCase):
     def test_div_tag_has_a_table_with_headers_name_and_number(
         self,
     ):
-
         response = self.client.get("/receipts/")
         if (
             response.status_code != 302
