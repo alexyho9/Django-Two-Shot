@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>My Receipts</h1>
+        <table>
+            <thead>
+                <th>Vendor</th>
+                <th>Total</th>
+                <th>Tax</th>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Account</th>
+            </thead>
+            <tbody>
+                {% for receipt_item in receipt_list %}
+                <tr>
+                    <td>{{ receipt_item.vendor }}</td>
+                    <td>{{ receipt_item.total }}</td>
+                    <td>{{ receipt_item.tax }}</td>
+                    <td>{{ receipt_item.date|date:"m/d/YY" }}</td>
+                    <td>{{ receipt_item.category.name }}</td>
+                    <td>{{ receipt_item.account.name }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
