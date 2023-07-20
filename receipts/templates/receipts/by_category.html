@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    My Receipts - By Category
+{% endblock title %}
+
+{% block content %}
+    <main>
+        <h1>My Receipts</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number of receipts</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for category_item in category_list.all %}
+                <tr>
+                    <td>{{ category_item.name }}</td>
+                    <td>{{ category_item.receipts.count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+{% endblock content %}

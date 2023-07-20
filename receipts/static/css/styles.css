@@ -1,0 +1,51 @@
+
+body {
+    font-family: helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e79;
+    border-bottom: 2px solid #182025;
+}
+
+header nav {
+    display: flexbox;
+    padding: 1.2em;
+}
+
+header nav ul * {
+    text-decoration: none;
+    color: white;
+    display: inline;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+main {
+    padding: 2em;
+}
+
+h1 {
+    color: #002b76;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: 2px solid black;
+}
+
+td, th {
+    padding: 0 10px;
+}
+
+table tr:nth-child(2n) {
+    background-color: #DDDDDD;
+}
