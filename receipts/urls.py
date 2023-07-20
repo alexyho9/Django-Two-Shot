@@ -1,5 +1,8 @@
 from django.urls import path
-from receipts.views import receipt_list
+from receipts.views import receipt_list, create_receipt
 
 
-urlpatterns = [path("", receipt_list, name="home")]
+urlpatterns = [
+    path("", receipt_list, name="home"),
+    path("create/", create_receipt, name="create_receipt"),
+]
